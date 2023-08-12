@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load cart_tag %}
+
+
+{% block styl %}<link rel="stylesheet" href="{% static 'app/css/style.css' %}" />{% endblock styl %}
+
+{% block title %}Checkout{% endblock title %}
+
+{% block main-content %}
+<br> <br> <br> <br> <br> <br> <br>
+<center>
+<h3>Something went wrong ! 🤔</h3>
+<p>Please try after some time </p>
+<div class="empty-text-contant text-center">
+    <a class="empty-cart-btn" href="{% url 'home' %}">
+        <i class="fa fa-arrow-left"> </i>Go to Home Page
+    </a>
+</div>
+</center>
+{% endblock main-content %}

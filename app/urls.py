@@ -11,6 +11,7 @@ urlpatterns = [
     path('contact/',contact,name="contact"),
     path('about/',about,name="about"),
     path('search/',search,name="search"),
+    path('wishlist/',wishlist,name="wishlist"),
 
     # auth
     path('register/',User_Register,name='User_Register'),
@@ -26,5 +27,8 @@ urlpatterns = [
          item_decrement, name='item_decrement'),
     path('cart/cart_clear/', cart_clear, name='cart_clear'),
     path('cart/cart_detail/',cart_detail,name='cart_detail'),
+
+     #Checkout
+     path('checkout/',checkout,name="checkout") 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

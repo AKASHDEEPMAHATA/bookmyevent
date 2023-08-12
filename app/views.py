@@ -156,3 +156,17 @@ def cart_clear(request):
 @login_required(login_url="/login/")
 def cart_detail(request):
     return render(request, 'cart.html')
+
+
+# -------------------------------------------------------
+# wishlist
+@login_required(login_url="/login/")
+def wishlist(request):
+    return render(request,'wishlist.html',{})
+
+# -------------------------------------------------------
+# Checkout
+@login_required(login_url="/login/")
+def checkout(request):
+    return render(request,'checkout.html',{})
+

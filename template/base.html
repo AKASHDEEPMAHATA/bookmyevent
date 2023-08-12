@@ -50,6 +50,7 @@
                       <a href="#">Pages</a>
                       <div class="uk-navbar-dropdown">
                         <ul class="uk-nav uk-navbar-dropdown-nav">
+                          <li ><a href="{% url 'wishlist' %}">Wishlist</a></li>
                           <li ><a href="{% url 'contact' %}">Contact Us</a></li>
                           <li ><a href="{% url 'about' %}">About Us</a></li>
                           {% comment %} <li ><a href="{% url 'User_Logout' %}">Logout</a></li> {% endcomment %}
@@ -71,6 +72,9 @@
 
                   {% endif %}
                  
+                  {% comment %} <div class="uk-navbar-item">
+                    <div><a class="uk-button uk-button-danger-outline" href="{% url 'cart_detail' %}">{{request.session.cart|length}} | Wishlist 💖</a>
+                 </div> </div> {% endcomment %}
 
                   <div class="uk-navbar-item">
                     <div><a class="uk-button uk-button-danger-outline" href="{% url 'cart_detail' %}">{{request.session.cart|length}} | Cart 🛒</a>

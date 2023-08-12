@@ -3,7 +3,7 @@
 {% load static %}
 {% block styl %}<link rel="stylesheet" href="{% static 'app/css/style.css' %}" />{% endblock styl %}
 
-{% block title %}Cart{% endblock title %}
+{% block title %}Wislist{% endblock title %}
 
 
 
@@ -23,7 +23,7 @@
                 </div> {% endcomment %}
                 <div class="empty-text-contant text-center">
                     <i class="pe-7s-shopbag"></i>
-                    <h3>There are no items in your cart</h3>
+                    <h3>There are no items in your Wishlist</h3>
                     <a class="empty-cart-btn" href="{% url 'home' %}">
                         <i class="fa fa-arrow-left"> </i>Continue booking
                     </a>
@@ -41,7 +41,7 @@
 
 <!-- Cart Area Start -->
 <br>
-<center><h3 class="cart-page-title">Your cart items 🛒</h3></center>
+<center><h3 class="cart-page-title">Your Wishlist items 💖</h3></center>
 <div class="cart-main-area pt-90px pb-90px">
     
     <div class="container">
@@ -107,14 +107,14 @@
                                 </div>
                                 <div class="cart-clear">
                                     {% comment %} <button>Update Shopping Cart</button> {% endcomment %}
-                                    <a href="{% url 'cart_clear' %}">Clear booking Cart</a>
+                                    <a href="{% url 'cart_clear' %}">Clear booking Wishlist</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </form>
                 
-                <div class="row">
+                {% comment %} <div class="row">
                     <div class="col-lg-4 col-md-6 mb-lm-30px">
                       <form action="{% url 'contact' %}" method="post">
                         {% csrf_token %}
@@ -173,25 +173,13 @@
                                 <h5>Platform Charge <span> Rs. 10.0</span></h5>    
                             </div>
                             <hr>
-
-                            {% comment %} {% if {{cart_total_amount}} %}
                             <h4 class="grand-totall-title">Grand Total <span>Rs. {{cart_total_amount|add:10}}</span></h4>
-
-                            {% else %}
-                            <h4 class="grand-totall-title">Grand Total <span>Rs. {{cart_total_amount}}</span></h4>
-
-                            {% endif %} {% endcomment %}
                             
-                            <h4 class="grand-totall-title">Grand Total <span>Rs. {{cart_total_amount|add:10}}</span></h4>
-
-
-                            {% comment %} <a href="https://paytm.business/link/1691419175766/LL_643219305">Proceed to Checkout</a> {% endcomment %}
-
-                            <a href="{% url 'checkout' %}">Proceed to Checkout</a>
+                            <a href="#">Proceed to Checkout</a>
                             
                         </div>
                     </div>
-                </div>
+                </div> {% endcomment %}
             </div>
         </div>
     </div>
